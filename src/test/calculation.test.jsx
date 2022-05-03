@@ -10,4 +10,7 @@ describe("String Calculator",  ()=>{
     it("should return sum of numbers when two string is passed", ()=>{
         expect(calculation('1,2')).toEqual(3);
     });
+    it("should return sum of numbers when unknown amount of numbers is passed", ()=>{
+        expect(calculation('1,2,3,4,5,6,7,8')).toEqual(36);
+    });
   });
