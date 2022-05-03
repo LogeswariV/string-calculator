@@ -6,7 +6,7 @@ const getSum = (stringArr) =>{
       return sum;
 }
 const filterArray = (string) => {
-    return string.split('')
+    return string.split(',')
     .filter(n => n !== '')
     .map(n => parseInt(n))
 }

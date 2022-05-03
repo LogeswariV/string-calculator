@@ -7,4 +7,7 @@ describe("String Calculator",  ()=>{
     it("should return number itself when one string is passed", ()=>{
         expect(calculation('1')).toEqual(1);
       });
+    it("should return sum of numbers when two string is passed", ()=>{
+        expect(calculation('1,2')).toEqual(3);
+    });
   });
