@@ -5,15 +5,21 @@ const getSum = (stringArr) =>{
   
       return sum;
 }
-const filterArray = (string) => {
-    return string.split(',')
+const  getDelimiter = () => {
+    return /[\n,]/
+}
+
+const getNumbers = (string,delimiter) => {
+    return string.split(delimiter)
     .filter(n => n !== '')
     .map(n => parseInt(n))
 }
+
 
 export function calculation(stringInput){
     if(stringInput === ''){
         return 0
     }
-    return getSum(filterArray(stringInput));
+    const delimiters = getDelimiter();
+    return getSum(getNumbers(stringInput,delimiters));
 }

@@ -13,4 +13,7 @@ describe("String Calculator",  ()=>{
     it("should return sum of numbers when unknown amount of numbers is passed", ()=>{
         expect(calculation('1,2,3,4,5,6,7,8')).toEqual(36);
     });
+    it("should handle new lines between numbers instead of commas and return sum", ()=>{
+        expect(calculation("1\n2,3" )).toEqual(6);
+    });
   });
