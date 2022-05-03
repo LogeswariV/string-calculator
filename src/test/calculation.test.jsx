@@ -14,6 +14,10 @@ describe("String Calculator",  ()=>{
         expect(calculation('1,2,3,4,5,6,7,8')).toEqual(36);
     });
     it("should handle new lines between numbers instead of commas and return sum", ()=>{
-        expect(calculation("1\n2,3" )).toEqual(6);
+        expect(calculation("1\n2,3")).toEqual(6);
     });
+    it("should handle different delimiters and return sum", ()=>{
+        expect(calculation("//;\n1;2")).toEqual(3);
+    });
+    
   });
